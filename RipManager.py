@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-from DB import DB
-from Httpy import Httpy
-from ImageUtils import ImageUtils
+from py.DB import DB
+from py.Httpy import Httpy
+from py.ImageUtils import ImageUtils
 
 from os        import path, remove
 from shutil    import copy2

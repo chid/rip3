@@ -5,16 +5,16 @@
 	Can output the status to an HTML file to be ready by users
 '''
 
-from SiteBase import SiteBase
-from VideoBase import VideoBase
+from py.SiteBase import SiteBase
+from py.VideoBase import VideoBase
 
 from time      import strftime, gmtime
 from shutil    import move
 from traceback import format_exc
 
 SECONDS_BETWEEN_CHECKS = 3600
-ALBUM_FILE_TO_WRITE = '../status.html'
-VIDEO_FILE_TO_WRITE = '../status_video.html'
+ALBUM_FILE_TO_WRITE = 'status.html'
+VIDEO_FILE_TO_WRITE = 'status_video.html'
 
 class StatusManager(object):
 	def update_albums(self):

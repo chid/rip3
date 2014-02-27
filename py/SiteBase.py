@@ -275,6 +275,8 @@ class SiteBase(object):
 				ripper = __import__('%s%s' % (prefix, mod), fromlist=[mod]).__dict__[mod]
 			except:
 				# Don't use a prefix
+				import sys
+				sys.path.append('py')
 				ripper = __import__(mod, fromlist=[mod]).__dict__[mod]
 			yield ripper
 

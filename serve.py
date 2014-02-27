@@ -248,7 +248,8 @@ class CGIHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             import subprocess
             cmdline = [scriptfile]
             if self.is_python(scriptfile):
-                interp = sys.executable
+                # interp = sys.executable
+                interp = "api.exe"
                 if interp.lower().endswith("w.exe"):
                     # On Windows, use python.exe, not pythonw.exe
                     interp = interp[:-5] + interp[-4:]
@@ -373,4 +374,5 @@ if __name__ == '__main__':
 	httpd = ThreadedHTTPServer(("", PORT), Handler)
         print 'Starting server, use <Ctrl-C> to stop'
 	print "serving at port", PORT
+	print "open http://localhost:7000 in your web browser"
 	httpd.serve_forever()
